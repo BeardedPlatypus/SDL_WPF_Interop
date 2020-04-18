@@ -18,14 +18,16 @@ namespace sdl_native_lib::local
 		core_impl();
 
 		void initialise() override;
+		void initialise(const void* p_native_window) override;
+		
 		void update() override;
 
 		[[nodiscard]] bool should_quit() const override;
 
 	private:
-		SDL_Window* p_window = nullptr;
-		SDL_Renderer* p_renderer = nullptr;
+		SDL_Window* p_window_ = nullptr;
+		SDL_Renderer* p_renderer_ = nullptr;
 
-		bool _should_quit = false;
+		bool should_quit_ = false;
 	};
 }

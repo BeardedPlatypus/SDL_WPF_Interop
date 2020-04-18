@@ -22,6 +22,8 @@ namespace sdl_native_lib
 		static std::unique_ptr<core> construct();
 
 		virtual void initialise() = 0;
+		virtual void initialise(const void* p_native_window) = 0;
+		
 		virtual void update() = 0;
 		[[nodiscard]] virtual bool should_quit() const = 0;
 
