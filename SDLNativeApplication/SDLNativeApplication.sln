@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SDLNativeApplication", "SDLNativeApplication\SDLNativeApplication.vcxproj", "{83057131-D364-4E3B-81E3-BF43B07E4590}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6D3A150B-CC3F-43A6-90CA-AFEA1E1A4741} = {6D3A150B-CC3F-43A6-90CA-AFEA1E1A4741}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SDLNativeLib", "SDLNativeLib\SDLNativeLib.vcxproj", "{6D3A150B-CC3F-43A6-90CA-AFEA1E1A4741}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +26,14 @@ Global
 		{83057131-D364-4E3B-81E3-BF43B07E4590}.Release|x64.Build.0 = Release|x64
 		{83057131-D364-4E3B-81E3-BF43B07E4590}.Release|x86.ActiveCfg = Release|Win32
 		{83057131-D364-4E3B-81E3-BF43B07E4590}.Release|x86.Build.0 = Release|Win32
+		{6D3A150B-CC3F-43A6-90CA-AFEA1E1A4741}.Debug|x64.ActiveCfg = Debug|x64
+		{6D3A150B-CC3F-43A6-90CA-AFEA1E1A4741}.Debug|x64.Build.0 = Debug|x64
+		{6D3A150B-CC3F-43A6-90CA-AFEA1E1A4741}.Debug|x86.ActiveCfg = Debug|Win32
+		{6D3A150B-CC3F-43A6-90CA-AFEA1E1A4741}.Debug|x86.Build.0 = Debug|Win32
+		{6D3A150B-CC3F-43A6-90CA-AFEA1E1A4741}.Release|x64.ActiveCfg = Release|x64
+		{6D3A150B-CC3F-43A6-90CA-AFEA1E1A4741}.Release|x64.Build.0 = Release|x64
+		{6D3A150B-CC3F-43A6-90CA-AFEA1E1A4741}.Release|x86.ActiveCfg = Release|Win32
+		{6D3A150B-CC3F-43A6-90CA-AFEA1E1A4741}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
