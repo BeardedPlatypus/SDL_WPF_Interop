@@ -1,20 +1,41 @@
-// SDLNativeApplication.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include <string>
 
+#include <SDL2/SDL.h>
+
+// Required for SDL2.
+#undef main 
+
+/// <summary>
+/// Entry point of the SDLNativeApplication.
+/// </summary>
+/// <returns>
+/// Return code of this application.
+/// </returns>
 int main()
 {
-    std::cout << "Hello World!\n";
+	SDL_Init(SDL_INIT_VIDEO);
+	atexit(SDL_Quit);
+
+	const std::string title = "SDL Native App";
+	const auto p_window = SDL_CreateWindow(title.c_str(), 100, 100, 1200, 600, SDL_WINDOW_SHOWN);
+
+	const auto p_renderer = SDL_CreateRenderer(p_window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+
+	SDL_Event sdl_event;
+	bool should_quit = false;
+
+	while (!should_quit)
+	{
+		SDL_RenderClear(p_renderer);
+		SDL_RenderPresent(p_renderer);
+		SDL_Delay(10);
+		
+		while (SDL_PollEvent(&sdl_event))
+		{
+			if (sdl_event.type != SDL_QUIT) continue;
+			should_quit = true;
+			break;
+		}
+	}
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
