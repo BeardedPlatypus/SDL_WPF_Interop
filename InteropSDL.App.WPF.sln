@@ -10,6 +10,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InteropSDL.App.WPF", "Inter
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InteropSDL.Lib.Core", "InteropSDL.Lib.Core\InteropSDL.Lib.Core.vcxproj", "{A2ED5D3C-5EDE-4CC6-8DCF-BA18392F0407}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InteropSDL.Lib.Impl", "InteropSDL.Lib.Impl\InteropSDL.Lib.Impl.vcxproj", "{771DA743-27F9-49FE-AC9A-A0ED36378AE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,16 @@ Global
 		{A2ED5D3C-5EDE-4CC6-8DCF-BA18392F0407}.Release|x64.Build.0 = Release|x64
 		{A2ED5D3C-5EDE-4CC6-8DCF-BA18392F0407}.Release|x86.ActiveCfg = Release|Win32
 		{A2ED5D3C-5EDE-4CC6-8DCF-BA18392F0407}.Release|x86.Build.0 = Release|Win32
+		{771DA743-27F9-49FE-AC9A-A0ED36378AE0}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{771DA743-27F9-49FE-AC9A-A0ED36378AE0}.Debug|x64.ActiveCfg = Debug|x64
+		{771DA743-27F9-49FE-AC9A-A0ED36378AE0}.Debug|x64.Build.0 = Debug|x64
+		{771DA743-27F9-49FE-AC9A-A0ED36378AE0}.Debug|x86.ActiveCfg = Debug|Win32
+		{771DA743-27F9-49FE-AC9A-A0ED36378AE0}.Debug|x86.Build.0 = Debug|Win32
+		{771DA743-27F9-49FE-AC9A-A0ED36378AE0}.Release|Any CPU.ActiveCfg = Release|Win32
+		{771DA743-27F9-49FE-AC9A-A0ED36378AE0}.Release|x64.ActiveCfg = Release|x64
+		{771DA743-27F9-49FE-AC9A-A0ED36378AE0}.Release|x64.Build.0 = Release|x64
+		{771DA743-27F9-49FE-AC9A-A0ED36378AE0}.Release|x86.ActiveCfg = Release|Win32
+		{771DA743-27F9-49FE-AC9A-A0ED36378AE0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
