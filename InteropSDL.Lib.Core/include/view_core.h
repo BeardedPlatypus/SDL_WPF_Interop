@@ -1,6 +1,7 @@
 #pragma once
 
 namespace interop_sdl {
+namespace lib {
 namespace core {
 	public ref class view_core sealed {
 	public:
@@ -11,5 +12,6 @@ namespace core {
 		void update();
 		bool should_exit();
 	};
+}
 }
 }

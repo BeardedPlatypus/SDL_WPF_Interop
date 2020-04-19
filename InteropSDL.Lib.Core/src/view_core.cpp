@@ -1,8 +1,8 @@
 #include "../include/view_core.h"
 
 
-namespace interop_sdl {
-namespace core {
+namespace interop_sdl::lib::core {
+
 	view_core::view_core() { }
 
 	
@@ -12,12 +12,13 @@ namespace core {
 	void view_core::initialise(void* p_native_window) { }
 
 
-	void view_core::update() { }
-
+	void view_core::update()
+	{
+		
+	}
 
 	bool view_core::should_exit()
 	{
 		return false;
 	}
-}
 }
