@@ -9,6 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InteropSDL.App.WPF", "Inter
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InteropSDL.Lib.Core", "InteropSDL.Lib.Core\InteropSDL.Lib.Core.vcxproj", "{A2ED5D3C-5EDE-4CC6-8DCF-BA18392F0407}"
+	ProjectSection(ProjectDependencies) = postProject
+		{771DA743-27F9-49FE-AC9A-A0ED36378AE0} = {771DA743-27F9-49FE-AC9A-A0ED36378AE0}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InteropSDL.Lib.Impl", "InteropSDL.Lib.Impl\InteropSDL.Lib.Impl.vcxproj", "{771DA743-27F9-49FE-AC9A-A0ED36378AE0}"
 EndProject

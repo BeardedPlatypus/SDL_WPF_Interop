@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "../include/view_core.h"
+#include "../include/view_core_impl.h"
 
 #include <string>
 
@@ -8,7 +8,7 @@
 namespace interop_sdl::lib::impl
 {
 
-	void view_core::initialise()
+	void view_core_impl::initialise()
 	{
 		SDL_Init(SDL_INIT_VIDEO);
 		atexit(SDL_Quit);
@@ -19,7 +19,7 @@ namespace interop_sdl::lib::impl
 		this->p_renderer_ = SDL_CreateRenderer(this->p_window_, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 	}
 
-	void view_core::initialise(const void* p_native_window)
+	void view_core_impl::initialise(const void* p_native_window)
 	{
 		SDL_Init(SDL_INIT_VIDEO);
 		atexit(SDL_Quit);
@@ -28,7 +28,7 @@ namespace interop_sdl::lib::impl
 		this->p_renderer_ = SDL_CreateRenderer(this->p_window_, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 	}
 
-	void view_core::update()
+	void view_core_impl::update()
 	{
 		SDL_RenderClear(this->p_renderer_);
 		SDL_RenderPresent(this->p_renderer_);
@@ -43,7 +43,7 @@ namespace interop_sdl::lib::impl
 		}
 	}
 
-	inline bool view_core::should_quit() const
+	bool view_core_impl::should_quit() const
 	{
 		return this->should_quit_;
 	}

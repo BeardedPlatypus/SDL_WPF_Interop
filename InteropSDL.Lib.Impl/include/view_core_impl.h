@@ -3,20 +3,19 @@
 #include <SDL2/SDL.h>
 
 
-namespace interop_sdl {
-namespace lib {
-namespace impl {
+namespace interop_sdl::lib::impl
+{
 
-class view_core {
+class view_core_impl {
 public:
-	view_core() = default;
+	view_core_impl() = default;
 
 	void initialise();
 	void initialise(const void* p_native_window);
 
 	void update();
 
-	bool should_quit() const;
+	[[nodiscard]] bool should_quit() const;
 
 private:
 	SDL_Window* p_window_ = nullptr;
@@ -24,7 +23,4 @@ private:
 
 	bool should_quit_ = false;
 };
-	
-}
-}
 }
