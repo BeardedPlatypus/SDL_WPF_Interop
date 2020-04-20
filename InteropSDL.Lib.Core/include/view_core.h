@@ -1,5 +1,5 @@
 #pragma once
-#include "view_core_impl.h"
+//#include "view_core_impl.h"
 
 namespace interop_sdl {
 namespace lib {
@@ -14,7 +14,7 @@ namespace core {
 		bool should_exit();
 
 	private:
-		impl::view_core_impl* p_view_core_impl_;
+		//impl::view_core_impl* p_view_core_impl_;
 	};
 }
 }
