@@ -7,6 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
+        <Border Grid.Row="0" Grid.Column="0" Background="LightCoral" BorderBrush="Black" BorderThickness="1" />
+        <Border Grid.Row="0" Grid.Column="1"  BorderBrush="Black" BorderThickness="1" Name="SDLHostElement"/>
+        <Border Grid.Row="0" Grid.Column="2" Background="LightGreen" BorderBrush="Black" BorderThickness="1" />
+        <Border Grid.Row="1" Grid.Column="0" Background="Coral" BorderBrush="Black" BorderThickness="1" />
+        <Border Grid.Row="1" Grid.Column="1" Background="LightSkyBlue"  BorderBrush="Black" BorderThickness="1" />
+        <Border Grid.Row="1" Grid.Column="2" Background="LimeGreen" BorderBrush="Black" BorderThickness="1" />
     </Grid>
 </Window>
