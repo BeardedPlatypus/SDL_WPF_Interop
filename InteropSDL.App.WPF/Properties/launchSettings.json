@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "InteropSDL.App.WPF": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

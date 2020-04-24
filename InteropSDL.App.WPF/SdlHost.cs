@@ -40,6 +40,7 @@ namespace InteropSDL.App.WPF
                 IntPtr.Zero,
                 0);
 
+            /*
             HwndSDLControl = CreateWindowEx(0, "static", "",
                 WsChild | WsVisible | LbsNotify
                 | WsVscroll | WsBorder,
@@ -49,17 +50,16 @@ namespace InteropSDL.App.WPF
                 (IntPtr)ListboxId,
                 IntPtr.Zero,
                 0);
+            */
 
             _core = new interop_sdl.lib.core.view();
 
-            /*
             unsafe
             {
-                _core.initialise(HwndSDLControl.ToPointer());
+                _core.initialise(_hwndHost.ToPointer());
             }
             
             _core.update();
-            */
             return new HandleRef(this, _hwndHost);
         }
 

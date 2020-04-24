@@ -1,4 +1,5 @@
 #pragma once
+#include <SDL2/SDL.h>
 
 namespace interop_sdl::lib::impl {
 
@@ -11,5 +12,10 @@ public:
 
 	void update();
 	[[nodiscard]] bool should_quit() const;
+private:
+	SDL_Window* p_window_ = nullptr;
+	SDL_Renderer* p_renderer_ = nullptr;
+
+	bool should_quit_ = false;
 };
 }
