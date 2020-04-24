@@ -25,10 +25,14 @@ namespace interop_sdl::lib::impl
 
 		this->p_window_ = SDL_CreateWindowFrom(p_native_window);
 		this->p_renderer_ = SDL_CreateRenderer(this->p_window_, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+
+		int w, h;
+		SDL_GetWindowSize(this->p_window_, &w, &h);
 	}
 
 	void view::update()
 	{
+		SDL_SetRenderDrawColor(this->p_renderer_, 0, 0, 0, 255);
 		SDL_RenderClear(this->p_renderer_);
 		SDL_RenderPresent(this->p_renderer_);
 		SDL_Delay(10);
