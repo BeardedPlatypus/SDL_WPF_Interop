@@ -1,4 +1,5 @@
 #pragma once
+#include "InteropSDL.Lib.Impl/view.h"
 
 namespace interop_sdl {
 namespace lib {
@@ -11,6 +12,9 @@ namespace core {
 		void initialise(void* p_native_window);
 		void update();
 		bool should_exit();
+
+	private:
+		impl::view* p_view_;
 	};
 }
 }

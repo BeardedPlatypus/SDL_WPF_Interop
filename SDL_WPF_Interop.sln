@@ -4,8 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InteropSDL.App.WPF", "InteropSDL.App.WPF\InteropSDL.App.WPF.csproj", "{2A88BE40-477D-4DBA-8730-2389CA6C04F2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0180D215-AF42-4158-93B7-16B6415FF885} = {0180D215-AF42-4158-93B7-16B6415FF885}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InteropSDL.Lib.Core", "InteropSDL.Lib.Core\InteropSDL.Lib.Core.vcxproj", "{BDE570A5-BB66-4294-838F-FAD8841F94D9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0180D215-AF42-4158-93B7-16B6415FF885} = {0180D215-AF42-4158-93B7-16B6415FF885}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InteropSDL.Lib.Impl", "InteropSDL.Lib.Impl\InteropSDL.Lib.Impl.vcxproj", "{0180D215-AF42-4158-93B7-16B6415FF885}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +48,17 @@ Global
 		{BDE570A5-BB66-4294-838F-FAD8841F94D9}.Release|x64.Build.0 = Release|x64
 		{BDE570A5-BB66-4294-838F-FAD8841F94D9}.Release|x86.ActiveCfg = Release|Win32
 		{BDE570A5-BB66-4294-838F-FAD8841F94D9}.Release|x86.Build.0 = Release|Win32
+		{0180D215-AF42-4158-93B7-16B6415FF885}.Debug|Any CPU.ActiveCfg = Release|Win32
+		{0180D215-AF42-4158-93B7-16B6415FF885}.Debug|Any CPU.Build.0 = Release|Win32
+		{0180D215-AF42-4158-93B7-16B6415FF885}.Debug|x64.ActiveCfg = Debug|x64
+		{0180D215-AF42-4158-93B7-16B6415FF885}.Debug|x64.Build.0 = Debug|x64
+		{0180D215-AF42-4158-93B7-16B6415FF885}.Debug|x86.ActiveCfg = Debug|Win32
+		{0180D215-AF42-4158-93B7-16B6415FF885}.Debug|x86.Build.0 = Debug|Win32
+		{0180D215-AF42-4158-93B7-16B6415FF885}.Release|Any CPU.ActiveCfg = Release|Win32
+		{0180D215-AF42-4158-93B7-16B6415FF885}.Release|x64.ActiveCfg = Release|x64
+		{0180D215-AF42-4158-93B7-16B6415FF885}.Release|x64.Build.0 = Release|x64
+		{0180D215-AF42-4158-93B7-16B6415FF885}.Release|x86.ActiveCfg = Release|Win32
+		{0180D215-AF42-4158-93B7-16B6415FF885}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
