@@ -1,6 +1,6 @@
 #include "pch.h"
+#include "InteropSDL.Lib.Core/view.h"
 
-#include "../include/view.h"
 
 namespace interop_sdl::lib::core {
 	view::view() {}

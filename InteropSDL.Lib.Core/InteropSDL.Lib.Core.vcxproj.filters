@@ -21,7 +21,7 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\view.h">
+    <ClInclude Include="include\InteropSDL.Lib.Core\view.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
