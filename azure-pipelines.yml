@@ -1,0 +1,45 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-2019'
+
+
+variables:
+  solution: '**/SDL_WPF_Interop.sln'
+  buildPlatform: 'x86'
+  buildConfiguration: 'Release'
+
+steps:
+  - script: |
+      vcpkg install sdl2
+      vcpkg integrate install
+    displayName: vcpkg - Install SDL2
+  - task: NuGetToolInstaller@0
+    displayName: 'Nuget - Install'
+
+  - task: NuGetCommand@2
+    displayName: 'Nuget - Restore Packages'
+    inputs:
+      restoreSolution: '$(solution)'
+
+  - task: VSBuild@1
+    displayName: 'Build - Executables'
+    inputs:
+      solution: '$(solution)'
+      platform: '$(buildPlatform)'
+      configuration: '$(buildConfiguration)'
+
+  - task: CopyFiles@2
+    displayName: 'Build - Copy Executable'
+    inputs:
+      SourceFolder: '$(Build.SourcesDirectory)/InteropSDL.App.WPF/bin/$(buildConfiguration)/netcoreapp3.1/'
+      Contents: '*.?(exe|dll|json)'
+      TargetFolder: '$(Build.ArtifactStagingDirectory)'
+      CleanTargetFolder: true
+  
+  - task: PublishPipelineArtifact@0
+    displayName: 'Build - Publish executables'
+    inputs:
+      artifactName: 'Executable'
+      targetPath: '$(Build.ArtifactStagingDirectory)'
