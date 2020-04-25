@@ -9,14 +9,10 @@ namespace InteropSDL.App.WPF
         internal const int
             WsChild = 0x40000000,
             WsVisible = 0x10000000,
-            LbsNotify = 0x00000001,
             HostId = 0x00000002,
-            ListboxId = 0x00000001,
-            WsVscroll = 0x00200000,
-            WsBorder = 0x00800000;
+            WmErasebkgnd = 0x0014;
 
         private IntPtr _hwndHost;
-        public IntPtr HwndSDLControl { get; private set; }
 
         private interop_sdl.lib.core.view _core;
 
@@ -41,18 +37,6 @@ namespace InteropSDL.App.WPF
                 IntPtr.Zero,
                 0);
 
-            /*
-            HwndSDLControl = CreateWindowEx(0, "static", "",
-                WsChild | WsVisible | LbsNotify
-                | WsVscroll | WsBorder,
-                0, 0,
-                _hostHeight, _hostWidth,
-                _hwndHost,
-                (IntPtr)ListboxId,
-                IntPtr.Zero,
-                0);
-            */
-
             _core = new interop_sdl.lib.core.view();
 
             unsafe
@@ -66,7 +50,18 @@ namespace InteropSDL.App.WPF
 
         protected override IntPtr WndProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
-            handled = false;
+            switch (msg)
+            {
+                case WmErasebkgnd:
+                    _core.update();
+                    handled = true;
+                    break;
+                default:
+                    handled = false;
+                    break;
+            }
+
+
             return IntPtr.Zero;
         }
 
