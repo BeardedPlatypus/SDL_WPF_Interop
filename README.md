@@ -22,8 +22,9 @@ my blog.
 ## Installation
 
 In order to use this repository as a base, several tools need to be installed.
-The Azure Devops Pipeline file provides a good overview of the steps that need
-to be taken to build the projecct on your own machine.
+The [Azure Devops Pipeline file](https://github.com/BeardedPlatypus/SDL_WPF_Interop/blob/master/azure-pipelines.yml) 
+provides a good overview of the steps that need to be taken to build the 
+projecct on your own machine.
 
 * Install [vcpkg](https://github.com/microsoft/vcpkg)
 * Clone this repository in an appropriate location:
