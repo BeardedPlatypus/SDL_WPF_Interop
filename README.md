@@ -1,6 +1,7 @@
 <p align="center"><img src="https://github.com/BeardedPlatypus/SDL_WPF_Interop/blob/master/sdl_interop_window.png?raw=true" alt="InteropWindow" title="InteropWindow" width=80% /></p>
 
 # Hosting a SDL2 Window within a WPF application
+[![Build Status](https://dev.azure.com/mwtegelaers/SDL%20WPF%20Interop/_apis/build/status/BeardedPlatypus.SDL_WPF_Interop?branchName=master)](https://dev.azure.com/mwtegelaers/SDL%20WPF%20Interop/_build/latest?definitionId=16&branchName=master)
 
 As part of my [pacman game](https://github.com/BeardedPlatypus/PacMan), I 
 wanted to develop some tools that would help me manage the different sprite
