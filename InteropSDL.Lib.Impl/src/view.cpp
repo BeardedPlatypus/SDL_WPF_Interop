@@ -32,7 +32,7 @@ namespace interop_sdl::lib::impl
 
 	void view::update()
 	{
-		SDL_SetRenderDrawColor(this->p_renderer_, 0, 0, 0, 255);
+		SDL_SetRenderDrawColor(this->p_renderer_, 128, 216, 235, 255);
 		SDL_RenderClear(this->p_renderer_);
 		SDL_RenderPresent(this->p_renderer_);
 		SDL_Delay(10);
